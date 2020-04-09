@@ -16,13 +16,6 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     isolation: isolate;
-
-    background: url(back.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    isolation: isolate;
 }
 
 
