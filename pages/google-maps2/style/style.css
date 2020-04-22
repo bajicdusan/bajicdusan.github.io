@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* map is background */
+#map{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* store locator text */
+.title{
+    position: absolute;
+    font-size: 88px;
+    color: #333;
+    text-transform: uppercase;
+    z-index: 100;
+    font-weight: bold;
+    top: 100px;
+    left: 100px;
+}
+
+/* search for zips (whole round box)*/
+.search-container{
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    background-color: #454E53;
+    z-index: 100;
+    top: 230px;
+    left: 100px;
+    border-radius: 30px;
+    display: flex;
+}
+
+/* enter zip */
+.search{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* text for enter zip input */
+.search-container input{
+    flex-grow: 1;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+
+/* when you enter zip code to dissapear outline */
+.search-container input:focus {
+    outline: none;
+}
+
+/* icon search font-awesome */
+.search i{
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+/* lists all stores in one container */
+.store-list-container{
+    position: absolute;
+    background: #fff;
+    width: 400px;
+    z-index: 100;
+    top: 320px;
+    left: 100px;
+    border-radius: 30px;
+    bottom: 20px;
+    display: flex;
+}
+
+.store-address{
+    font-size: 21px;
+    color: #514C4C;
+    margin-top: 30px;
+}
+
+.store-phone-number{
+    color: #B5ADAD;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* number of individual store to the right of container */
+.store-number{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    background-color: #454E53;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.store-address span{
+    display: block;
+}
+
+.stores-list{
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-y: scroll;
+    flex-grow: 1;
+}
+
+.store-info-container{
+    flex-grow: 1;
+}
+
+.store-container{
+    border-bottom: 1px solid #979797;
+    cursor: pointer;
+}
+
+.store-number-container{
+    display: flex;
+    align-items: center;
+}
+
+.store-container-background{
+    display: flex;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 18px;
+    transition: all 0.2 ease-in-out;
+}
+
+.store-container-background:hover{
+    background-color: #CCC;
+}
+
+/* on marker tap it shows selected store */
+.store-info-window {
+    min-width: 100px;
+    font-size: 18px;
+    padding: 8px;
+}
+
+/* store's name */
+.store-info-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(0,0,0,.87);
+    margin-top: 8px;
+}
+
+/* open/closed */
+.store-info-status {
+    margin-top: 6px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 6px;
+    font-size: 16px;
+}
+
+.store-info-address, .store-info-phone {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.store-info-address .circle, .store-info-phone .circle {
+    width: 30px;
+    height: 30px;
+    background-color: #EA4335;
+    color: white;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-right: 8px;
+}
+
+.get-directions-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.get-directions-container button {
+    background: #E57373;
+    border: none;
+    color: #fff;
+    font-family: Roboto;
+    padding: 12px;
+    text-transform: uppercase;
+    outline: 0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.get-directions-container button:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+    background-color: #f5a5a8;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+
+/* delete scrollbar */
+.stores-list::-webkit-scrollbar {
+    display: none;
+}
