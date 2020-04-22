@@ -2,7 +2,6 @@
 var map;
 var markers = [];
 var infoWindow;
-var locationSelect;
 
 // google map lat and lng position where we are
 function initMap() {
@@ -66,19 +65,19 @@ function displayStores(stores) {
 
         storesHtml += `
         <div class="store-container">
-                    <div class="store-container-background">
-                        <div class="store-info-container">
-                            <div class="store-address">
-                                <span>${address[0]}</span>
-                                <span>${address[1]}</span>
-                            </div>
-                            <div class="store-phone-number">${phone}</div>
-                        </div>
-                        <div class="store-number-container">
-                            <div class="store-number">${index + 1}</div>
-                        </div>
+            <div class="store-container-background">
+                <div class="store-info-container">
+                    <div class="store-address">
+                        <span>${address[0]}</span>
+                        <span>${address[1]}</span>
                     </div>
+                    <div class="store-phone-number">${phone}</div>
                 </div>
+                <div class="store-number-container">
+                    <div class="store-number">${index + 1}</div>
+                </div>
+            </div>
+        </div>
         `
     });
 
@@ -89,24 +88,57 @@ function displayStores(stores) {
 function showStoreMarkers(stores) {
     var bounds = new google.maps.LatLngBounds();
     stores.forEach(function(store, index) {
+        var latitude = store.coordinates.latitude;
+        var longitude = store.coordinates.longitude;
         var latlng = new google.maps.LatLng(
-            store.coordinates.latitude,
-            store.coordinates.longitude);
+            latitude,longitude);
 
         var name = store.name;
         var address = store.addressLines[0];
-        createMarker(latlng, name, address, index);
+        var openStatusText = store.openStatusText;
+        phone = store.phoneNumber;
+
+        createMarker(latitude, longitude, openStatusText, phone, latlng, name, address, index);
         bounds.extend(latlng);
     })
     map.fitBounds(bounds);
 }
 
-function createMarker(latlng, name, address, index) {
-    var html = "<b>" + name + "</b> <br/>" + address;
+function createMarker(latitude, longitude, openStatusText, phone, latlng, name, address, index) {
+    // var html = "<b>" + name + "</b> <br/>" + address;
+    var html = `
+        <div class="store-info-window">
+            <div class="store-info-name">
+                ${name}
+            </div>
+            <div class="store-info-status">
+                ${openStatusText}
+            </div>
+            <div class="store-info-address">
+                <div class="circle">
+                    <i class="fas fa-location-arrow"></i>
+                </div>
+                ${address}
+            </div>
+            <div class="store-info-phone">
+                <div class="circle">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                ${phone}
+            </div>
+            <div class="get-directions-container">
+                <button type="button" class="waves-effect waves-light" onClick="getDirection(${latitude}, ${longitude});"> Get Directions </button>
+            </div>
+        </div>
+    `;
+
     var marker = new google.maps.Marker({
         map: map,
         position: latlng,
-        label: `${index + 1}`
+        label: {
+            text: (index + 1).toString(),
+            color: 'white'
+        },
     });
     google.maps.event.addListener(marker, 'click', function() {
         infoWindow.setContent(html);
@@ -115,3 +147,6 @@ function createMarker(latlng, name, address, index) {
     markers.push(marker);
 }
 
+function getDirection(latitude, longitude) {
+    window.open('https://www.google.com/maps/dir/?api=1&destination=' + latitude + "," + longitude, '_blank');
+}
