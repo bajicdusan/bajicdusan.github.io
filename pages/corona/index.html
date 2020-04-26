@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta property="og:image" content="image/ccpvirus-seo.jpg"> -->
+    <title>CCP VIRUS MAP RECORDS</title>
+    <!-- <link rel="icon" href="image/ccpvirus-seo.jpg" type="image/icon type"> -->
+    <script src="js/index.js"></script>
+    <!-- <script src="js/google-map-style.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/2d2db9b58d.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163714592-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-163714592-1');
+    </script> -->
+    <!-- <script src="reload.js"></script> -->
+    <style>
+        @import url('style/style.css');
+    </style>
+</head>
+
+<body>
+    <div class="loader-container">
+        <h1>CORONA VIRUS WORLD STATUS</h1>
+        <div class="loader"></div>
+    </div>
+    
+    <div class="title">CORONA VIRUS STATUS</div>
+
+    <div class="search-container">
+        <div class="search">
+            <input type="text" name="" id="country-input" placeholder="Enter Country" onchange="searchCountry()" />
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+
+    <div class="countrys-list-container">
+        <div class="countrys-list">
+            <!-- <div class="country-container">
+                <div class="country-info-container">
+                    <div class="country-name">
+                        <span> 7438 South Ave.</span>
+                        <span>Norman, OK 73072</span>
+                    </div>
+                    <div class="boundary">
+                        (950) 715-9938
+                    </div>
+                </div>
+                <div class="country-number-container">
+                    <div class="country-number">
+                        1
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    
+    <!--  -->
+    <div id="map"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLEW4S3JwYwrXkqQPc26o76hb7cRbO0Hs&callback=initMap">
+
+    </script>
+    
+    <!-- <script src="js/link-image.js"></script> -->
+</body>
+
+</html>
