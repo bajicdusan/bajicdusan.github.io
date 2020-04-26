@@ -29,7 +29,7 @@ async function initMap() {
     // var myLatLng = { lat: 48.155028, lng: 11.261659 };
     // var vietnamIndex = covidData.findIndex(one => one['country'] == 'Vietnam');
     // let vietnam = covidData[vietnamIndex]['country']['countryInfo'];
-    let europe = { lat: 48, lng: 11 }
+    let europe = { lat: 47, lng: 18 }
     map = new google.maps.Map(document.getElementById('map'), {
         center: europe,
         zoom: 5,
