@@ -29,11 +29,12 @@ async function initMap() {
     // var myLatLng = { lat: 48.155028, lng: 11.261659 };
     // var vietnamIndex = covidData.findIndex(one => one['country'] == 'Vietnam');
     // let vietnam = covidData[vietnamIndex]['country']['countryInfo'];
-    let europe = { lat: 47, lng: 18 }
+    let europe = { lat: 48, lng: 11 }
     map = new google.maps.Map(document.getElementById('map'), {
         center: europe,
         zoom: 5,
         mapTypeId: 'roadmap',
+        styles: customGoogleMapstyles,
         // styles: customGoogleMapstyles,
         streetViewControl: false,
         zoomControl: false,
@@ -144,7 +145,7 @@ function clickcountry(index) {
     document.querySelector('.countrys-list-container').style.display = "none";
     // clickSound.play();
     var key = index.toString();
-    let selectedMarker = markers.find(one => one.label.toLowerCase() === index.toLowerCase())
+    let selectedMarker = markers.find(one => one.label.toLowerCase() === index.toLowerCase());
     infoWindow.setContent(infos[key]);
     infoWindow.open(map, selectedMarker);
 }

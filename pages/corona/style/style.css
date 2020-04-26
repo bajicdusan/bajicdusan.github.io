@@ -14,7 +14,8 @@
 } */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Roboto Condensed', sans-serif;
     /* font-family: D-Din-Condensed; */
     height: 100vh;
     margin: 0;
@@ -30,37 +31,43 @@ body {
     height: 100%
 }
 
+/* slova-naslov */
 .title {
     position: absolute;
     z-index: 100;
-    font-size: 52px;
+    font-size: 4.4vw;
     font-weight: bold;
-    color: rgb(54, 46, 50, 0.5);
+    /* color: rgb(63, 67, 69); */
+    color: silver;
     transition: color 0.2s ease;
     text-transform: uppercase;
-    top: 40px;
+    
+    top: 70px;
     left: 80px;
 }
 
-.title:hover {
+/* naslov kada se predje kursorom */
+/* .title:hover {
     color: rgb(54, 46, 50, 1);
-}
+} */
 
+/* search country */
 .search-container {
+    font-family: 'Roboto Condensed', sans-serif;
     position: absolute;
     z-index: 100;
     top: 130px;
     left: 80px;
     width: 400px;
     height: 60px;
-    background-color: rgb(88, 78, 84, 0.9);
+    background-color: rgba(63, 67, 69, 0.9);
     transition: color 0.2s ease;
     border-radius: 44px;
     display: flex;
 }
 
 .search-container:hover {
-    background-color: rgb(88, 78, 84, 1);
+    background-color: rgb(63, 67, 69);
 }
 
 .search-container .search {
@@ -72,7 +79,7 @@ body {
 }
 
 .search-container input {
-    font-family: D-DIN-Condensed;
+    /* font-family: D-DIN-Condensed; */
     width: 100%;
     font-size: 25px;
     background-color: transparent;
@@ -99,10 +106,12 @@ body {
 }
 
 .countrys-list-container {
+    font-family: 'Roboto Condensed', sans-serif;
     width: 400px;
     position: absolute;
     z-index: 100;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(24, 26, 27);
+    color: white;
     top: 220px;
     left: 80px;
     border-radius: 44px;
@@ -136,7 +145,8 @@ body {
 }
 
 .country-container:hover {
-    background-color: rgb(170, 95, 47, 0.6);
+    /* background-color: rgb(170, 95, 47, 0.6); */
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 44px;
     cursor: pointer;
 }
@@ -147,7 +157,7 @@ body {
 
 .country-container:hover .country-number {
     background-color: white;
-    color: rgb(170, 95, 47);
+    /* color: rgb(170, 95, 47); */
 }
 
 .country-container .country-info-container {
@@ -296,7 +306,7 @@ body {
 .info-main-container .info-country {
     font-size: 22px;
     font-weight: bold;
-    color: red;
+    /* color: red; */
 }
 
 .info-main-container .info-last-updated {
@@ -409,10 +419,11 @@ body {
 .loader {
     border: 16px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 16px solid #3E484B;
-    border-right: 16px solid #D68A79;
-    border-bottom: 16px solid #6E7C7E;
-    border-left: 16px solid #D68A79;
+    /* border: 2px solid black; */
+    border-top: 8px solid #EA4436;
+    border-right: 8px solid #4285F5;
+    border-bottom: 8px solid #34A952;
+    border-left: 8px solid #FBBD06;
     width: 40px;
     height: 40px;
     -webkit-animation: spin 2s linear infinite;
@@ -505,3 +516,15 @@ body {
         left: 40px;
     }
 }
+/* 
+.gm-style .gm-style-iw-c {
+    background-color: black;
+}
+
+.gm-style-iw-c{
+    background-color: black;
+}
+
+.gm-style-iw .gm-style-iw-c{
+    background-color: black;
+} */
