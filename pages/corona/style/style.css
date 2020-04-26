@@ -35,14 +35,13 @@ body {
 .title {
     position: absolute;
     z-index: 100;
-    font-size: 4.4vw;
+    font-size: 42px;
     font-weight: bold;
     /* color: rgb(63, 67, 69); */
     color: silver;
     transition: color 0.2s ease;
     text-transform: uppercase;
-    
-    top: 70px;
+    top: 60px;
     left: 80px;
 }
 
