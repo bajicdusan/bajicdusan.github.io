@@ -22,9 +22,9 @@ body {
     padding: 0;
 }
 
-#my_song {
+/* #my_song {
     display: none;
-}
+} */
 
 #map {
     width: 100%;
@@ -101,7 +101,7 @@ body {
 
 .search i {
     font-size: 25px;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .countrys-list-container {
@@ -268,29 +268,25 @@ body {
 }
 
 
-/* Let's get this party started */
-
 ::-webkit-scrollbar {
     width: 12px;
 }
 
-
 /* Track */
-
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
 
-
 /* Handle */
-
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background: rgba(255, 0, 0, 0.8);
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 ::-webkit-scrollbar-thumb:window-inactive {
@@ -338,26 +334,26 @@ body {
     cursor: pointer;
 }
 
-.misscellaneous {
+/* .misscellaneous {
     position: absolute;
     z-index: 100;
     left: 50vw;
     bottom: 21px;
-}
+} */
 
-.patreon {
+/* .patreon {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
+} */
 
-.misscellaneous .donate .patreon img {
+/* .misscellaneous .donate .patreon img {
     border-radius: 50%;
     width: 30px;
-}
+} */
 
-.patreon a {
+/* .patreon a {
     color: white;
     font-weight: bold;
     padding: 5px;
@@ -374,7 +370,7 @@ body {
 .patreon:hover a {
     visibility: visible;
     opacity: 1;
-}
+} */
 
 
 /* Spinner */
@@ -384,7 +380,8 @@ body {
     width: 100vw;
     height: 100vh;
     z-index: 998;
-    background: rgb(255, 255, 255, 0.6);
+    /* background: rgb(255, 255, 255, 0.6); */
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -470,15 +467,15 @@ body {
         top: 52vh;
         left: 14vw;
     }
-    .misscellaneous {
+    /* .misscellaneous {
         position: absolute;
         z-index: 100;
         left: 45vw;
         bottom: 3vw;
-    }
-    .patreon a {
+    } */
+    /* .patreon a {
         display: none;
-    }
+    } */
     .loader-container h1 {
         display: inline;
         color: rgb(54, 46, 50, 1);
