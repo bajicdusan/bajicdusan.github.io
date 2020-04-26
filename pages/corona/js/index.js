@@ -91,7 +91,7 @@ function showCovidMarkers(newCovidData) {
         var latlng = new google.maps.LatLng(
             one['countryInfo']['lat'],
             one['countryInfo']['long']);
-        let lastUpdated = new Date(one['updated']).toLocaleDateString("vn")
+        let lastUpdated = new Date(one['updated']).toLocaleDateString("it-IT")
         let country = one['country']
         let cases = one['cases']
         let deaths = one['deaths']
