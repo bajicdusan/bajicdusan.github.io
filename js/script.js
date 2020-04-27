@@ -1,16 +1,21 @@
-const options = {
-    bottom: '32px', // default: '32px'
-    right: '32px', // default: '32px'
-    left: 'unest', // default: 'unset'
-    time: '0.3s', // default: '0.3s'
-    mixColor: '#fff', // default: '#fff'
-    backgroundColor: '#fff',  // default: '#fff'
-    buttonColorDark: '#100f2c',  // default: '#100f2c'
-    buttonColorLight: '#fff', // default: '#fff'
-    saveInCookies: true, // default: true,
-    label: '🌓', // default: ''
-    autoMatchOsTheme: true // default: true
-}
+// this one is jut to wait for the page to load
+document.addEventListener('DOMContentLoaded', () => {
 
-const darkmode = new Darkmode(options);
-darkmode.showWidget();
+    const themeStylesheet = document.getElementById('theme');
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+        themeStylesheet.href = storedTheme;
+    }
+    const themeToggle = document.getElementById('input');
+    themeToggle.addEventListener('click', () => {
+        // if it's light -> go dark
+        if (themeStylesheet.href.includes('light')) {
+            themeStylesheet.href = 'dark-theme.css';
+        } else {
+            // if it's dark -> go light
+            themeStylesheet.href = 'light-theme.css';
+        }
+        // save the preference to localStorage
+        localStorage.setItem('theme', themeStylesheet.href)
+    })
+})
