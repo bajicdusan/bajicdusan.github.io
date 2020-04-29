@@ -66,7 +66,7 @@ a:active {
     border-right: 1px solid rgba(255,255,255,0.5);
     margin: 0 20px 0 0;
 }
-#nav { float: left; }
+/* #nav { float: left; } */
 #nav ul {
     margin: 0;
     padding: 0;
