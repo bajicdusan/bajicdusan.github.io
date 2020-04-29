@@ -61,6 +61,7 @@ a:active {
     /* line-height: 12px; */
     border-bottom: 5px solid #AAA; 
     display: flex;
+    height: 80px;
 } 
 #logo { 
     /* float: left; */
@@ -69,8 +70,6 @@ a:active {
     flex-grow: 0;
     border-right: 1px solid rgba(255,255,255,0.5);
     margin: 0 20px 0 0;
-    width: 220px;
-    height: 80px;
 }
 #nav {
     /* float: left; */
