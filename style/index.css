@@ -58,16 +58,25 @@ a:active {
 #header {
     background: #C51417;
     overflow: hidden;
+    line-height: 12px;
     border-bottom: 5px solid #AAA; 
 
 } 
 #logo { 
-    float: left;
+    /* float: left; */
+    display: inline-flex;
+    flex-direction: row;
+    flex-grow: 0;
     border-right: 1px solid rgba(255,255,255,0.5);
     margin: 0 20px 0 0;
 }
 #nav {
-    float: left;
+    /* float: left; */
+    margin: 0;
+    display: inline-flex;
+    flex-direction: row;
+    flex-grow: 1;
+
 }
 #nav ul {
     margin: 0;
@@ -98,6 +107,9 @@ a:active {
 /* slider for dark theme */
 .container{
     /* position: absolute; */
+    display: inline-flex;
+    flex-direction: row;
+    flex-grow: 0;
     float: right;
     /* transform: translate(0%, 0%); */
     /* margin-left: auto; */
