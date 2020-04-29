@@ -70,14 +70,6 @@ a:visited {
     background: #555;
 }
 
-/* slider for dark theme */
-.container{
-    /* position: absolute; */
-    float: right;
-    /* transform: translate(0%, 0%); */
-    text-align: center;
-}
-
 .switch{
     position: relative;
     display: inline-block;
