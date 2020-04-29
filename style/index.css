@@ -57,10 +57,10 @@ a:active {
 }
 #header {
     background: #C51417;
-    overflow: hidden;
-    line-height: 12px;
+    /* overflow: hidden; */
+    /* line-height: 12px; */
     border-bottom: 5px solid #AAA; 
-
+    display: flex;
 } 
 #logo { 
     /* float: left; */
@@ -89,9 +89,10 @@ a:active {
 #nav ul li a {
     display: block;
     padding: 30px 15px;
+    justify-content: center;
     /* height: 20px; */
     line-height: 20px;
-    max-width: 60px;
+    /* max-width: 60px; */
 }
 #nav ul li a:link,
 #nav ul li a:visited {
@@ -109,9 +110,11 @@ a:active {
 .container{
     /* position: absolute; */
     display: inline-flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     flex-grow: 0;
-    float: right;
+    justify-content: center;
+    align-items: center;
+    /* float: right; */
     /* transform: translate(0%, 0%); */
     /* margin-left: auto; */
     /* text-align: center; */
