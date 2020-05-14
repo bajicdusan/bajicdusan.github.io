@@ -37,7 +37,7 @@ function setStatusClosed(id) {
 
   for (var i = 0; i < issues.length; i++) {
     if (issues[i].id == id) {
-      issues[i].status = 'Close';
+      issues[i].status = 'Closed';
     }
   }
 
