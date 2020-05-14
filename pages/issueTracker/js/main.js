@@ -101,7 +101,7 @@ function fetchIssues() {
                               '<h3>' + desc + '</h3>'+
                               '<p><span class="glyphicon glyphicon-time"></span> ' + severity + '</p>'+
                               '<p><span class="glyphicon glyphicon-user"></span> ' + assignedTo + '</p>'+
-                              '<a href="#" style="display: none;" id="ButtonOpen" onclick="setStatusOpen(\''+id+'\')" class="btn btn-success">Close</a> '+
+                              '<a href="#" style="display: none;" id="ButtonOpen" onclick="setStatusOpen(\''+id+'\')" class="btn btn-success">Open</a> '+
                               '<a href="#" id="ButtonClose" onclick="setStatusClosed(\''+id+'\')" class="btn btn-warning">Close</a> '+
                               '<a href="#" onclick="deleteIssue(\''+id+'\')" class="btn btn-danger">Delete</a>'+
                               '</div>';
